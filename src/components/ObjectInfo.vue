@@ -100,7 +100,7 @@
         position: fixed;
         right: 0;
         top: 0;
-        max-width: 470px;
+        max-width: 480px;
         min-width: 300px;
         height: 100vh;
         padding: 20px;

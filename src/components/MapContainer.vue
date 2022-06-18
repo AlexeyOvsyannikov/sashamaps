@@ -98,9 +98,21 @@
                     position: [properties["Широт"], properties["Долго"]],
                     website: properties["website"],
                     phone:properties["phone"] ? '+7(342)' + properties["phone"] : '',
-                    rating: properties["Рейти"],
+                    rating: properties["rating"],
                     type: properties["тип__1"] ?? 'школа',
-                    address: properties["Адрес"]?.replaceAll('литер', '') ?? ''
+                    address: properties["Адрес"]?.replaceAll('литер', '') ?? '',
+
+                    teachers: properties["teachers"],
+                    pupils: properties["pupils"],
+                    pupilsOvz: properties["pupilsOvz"] ?? 0,
+                    pupilsHome: properties["pupilsHome"] ?? 0,
+
+                    systems: {
+                        trajectory: properties["sTrajectory"],
+                        epos: properties["sEpos"],
+                        yandex: properties["sYandex"],
+                        other: properties["sOther"],
+                    }
                 }));
             },
             center: {

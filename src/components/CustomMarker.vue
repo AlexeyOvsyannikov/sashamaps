@@ -1,8 +1,5 @@
 <template>
     <l-marker class="MYMARKER" :icon="markerIcon" :lat-lng="source.position" @click="$emit('onMarkerClick', source)">
-<!--        <l-popup :options="options">-->
-<!--            <a href="javascript:;">{{source.id}}</a>-->
-<!--        </l-popup>-->
     </l-marker>
 </template>
 

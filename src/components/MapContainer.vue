@@ -93,9 +93,8 @@ export default {
                 return [];
             }
 
-            return this.formatted.map(it => ({
+            return this.formatted.schools.map(it => ({
                 id: Math.round(Math.random() * 1e9),
-                formatted: true,
                 position: [it["Широт"], it["Долго"]],
                 name: it.name,
                 fields: it.fields
@@ -111,10 +110,8 @@ export default {
                 name: properties["Наим_1"].toUpperCase(),
                 position: [properties["Широт"], properties["Долго"]],
                 fields: [
-                    {"key": "website", "name": "Вебсайт", "value": properties["website"]},
-                    {"name": "Телефон", "value": properties["phone"] ? '+7(342)' + properties["phone"] : ''},
-                    {"name": "Тип учебного заведения", "value": properties["тип__1"] ?? 'школа'},
-                    {"name": "Адрес", "value": properties["Адрес"]?.replaceAll('литер', '') ?? ''}
+                    { "name": "Тип учебного заведения", "value": properties["тип__1"] ?? 'школа'},
+                    { "name": "Адрес", "value": properties["Адрес"]?.replaceAll('литер', '') ?? ''}
                 ],
             }));
         },
